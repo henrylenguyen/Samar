@@ -1047,6 +1047,9 @@ button:hover {
     width: 15rem;
     height: 5rem;
   }
+  button:active {
+    background-position: right;
+  }
   h1 {
     font-size: 4rem;
   }
@@ -1069,7 +1072,7 @@ button:hover {
     transition: all 0.5s ease;
     position: relative;
   }
-  .toggle-bar:hover {
+  .toggle-bar:active {
     background-position: right;
   }
   .toggle-bar span {
@@ -1109,6 +1112,9 @@ button:hover {
   }
   .carousel__banner {
     width: 40rem;
+  }
+  .service ul li:active {
+    transform: translateY(-2rem);
   }
   .about__title h1 {
     font-size: 3.5rem;
@@ -1152,6 +1158,12 @@ button:hover {
     padding: 2rem;
     align-items: center;
   }
+  .future__content:active {
+    background: transparent;
+  }
+  .future__content:active::after {
+    opacity: 1;
+  }
   .future__content h3 {
     font-size: 1.5rem;
   }
@@ -1169,6 +1181,20 @@ button:hover {
   }
   .portfolio__item {
     margin-bottom: 3rem;
+  }
+  .portfolio__item:active::before {
+    left: 125%;
+  }
+  .portfolio__overlay:active .portfolio__icon {
+    transform: translate(-2rem, 2rem);
+    opacity: 1;
+    visibility: visible;
+  }
+  .portfolio__overlay:active .portfolio__text {
+    transform: translateY(-50%);
+  }
+  .plan__item:active {
+    border-image: url(../images/br.png) 1 round;
   }
   .services ul, .plan__box, .blog__box {
     display: block;
@@ -1350,7 +1376,7 @@ button:hover {
     width: 13rem;
   }
   .footer__item h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .footer__item h3::before {
     width: 1.3rem;

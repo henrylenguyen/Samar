@@ -1037,6 +1037,9 @@ button {
   }
   button{
     @include size(15rem,5rem);
+    &:active{
+      background-position: right;
+    }
   }
   h1{
     font-size: 4rem;
@@ -1058,7 +1061,7 @@ button {
     border: 1px solid;
     transition: all 0.5s ease;
     position: relative;
-    &:hover {
+    &:active {
       background-position: right;
     }
    span{
@@ -1110,6 +1113,9 @@ button {
   .carousel__banner{
     width: 40rem;
   }
+  .service ul li:active{
+    transform: translateY(-2rem);
+  }
   .about__title h1 {
     font-size: 3.5rem;
 }
@@ -1151,6 +1157,13 @@ button {
 .future__content{
   padding: 2rem;
   align-items: center;
+  &:active{
+      background: transparent;
+
+      &::after{
+        opacity: 1;
+      }
+    }
 }
 .future__content h3 {
     font-size: 1.5rem;
@@ -1170,6 +1183,27 @@ button {
 }
 .portfolio__item {
   margin-bottom: 3rem;
+   &:active::before {
+      left: 125%;
+    }
+}
+.portfolio__overlay{
+  &:active{
+      .portfolio__icon{
+        transform: translate(-2rem,2rem);
+        opacity: 1;
+        visibility: visible;
+      }
+      .portfolio__text{
+        transform: translateY(-50%);
+      }
+    }
+}
+.plan__item{
+    
+    &:active{
+      border-image: url(../images/br.png) 1 round
+    }
 }
   .services ul,.plan__box,.blog__box {
     display: block;
@@ -1354,7 +1388,7 @@ button {
   width: 13rem;
 }
 .footer__item h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .footer__item h3::before {
     width: 1.3rem;
