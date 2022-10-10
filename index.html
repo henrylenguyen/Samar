@@ -43,7 +43,7 @@
           <a class="header__logo">
             <img src="./images/logo-2.png" alt="logo-2">
           </a>
-          <nav>
+          <nav class="header__nav">
             <ul class="flex">
               <li>
                 <a href="#">
@@ -87,6 +87,13 @@
                 </div>
               </li>
             </ul>
+          </nav>
+          <nav class="header__nav--mobile">
+            <div class="toggle-bar">
+             <span></span>
+            <span></span>
+            <span></span>
+            </div>
           </nav>
         </div>
       </div>
@@ -279,7 +286,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000">
             <img src="./images/pic1_2.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -289,7 +298,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000">
             <img src="./images/pic2_1.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -299,7 +310,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000">
             <img src="./images/pic3_1.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -309,7 +322,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000">
             <img src="./images/pic4.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -319,7 +334,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
             <img src="./images/pic6.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -329,7 +346,9 @@
           <div class="portfolio__item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500">
             <img src="./images/pic5.jpg" alt="pic1_2">
             <div class="portfolio__overlay">
-              <div class="portfolio__icon"></div>
+              <div class="portfolio__icon">
+                <i class="fas fa-plus"></i>
+              </div>
               <div class="portfolio__text">
                 <h3>Software Landing</h3>
                 <p>By Jhone Doe</p>
@@ -684,8 +703,14 @@
 
 
   <!-- JQUERY -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.toggle-bar').click(function(){
+            $('.toggle-bar').toggleClass('active')
+        })
+    })
+</script>
 <!-- wow JS -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script>
@@ -704,6 +729,6 @@
     <script>
       $('.counter').countUp();
       </script>
-  
+
 </body>
 </html>
