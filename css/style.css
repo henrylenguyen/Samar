@@ -1040,6 +1040,9 @@ button:hover {
   }
 }
 @media screen and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
   button {
     width: 15rem;
     height: 5rem;
